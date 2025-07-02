@@ -8,7 +8,8 @@ Ce projet N8N vous permet de **générer automatiquement une proposition commerc
 
 Voici une capture du workflow :
 
-![Aperçu du workflow](Capture d’écran_2-7-2025_31710_falleiz.app.n8n.cloud.jpeg) <!-- Remplacez 'image.png' par le nom de votre image si besoin -->
+![Aperçu du workflow](workflow-apercu.png)
+ 
 
 ---
 
