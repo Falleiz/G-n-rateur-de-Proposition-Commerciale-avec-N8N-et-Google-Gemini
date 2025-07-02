@@ -1,0 +1,516 @@
+{
+  "name": "Popal commercial",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -920,
+        0
+      ],
+      "id": "2a6eb65a-d884-4c25-8ade-89aad5ac18f9",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Veuillez génerer une propostion personaliser pour le client suivant :\nClient : {{ $json['nom du client'] }} de {{ $json['Entreprise '] }}\nSecteur : {{ $json.Secteur }}\nBudget approximatif :  {{ $json.Budget }}\nDelai souhaité : {{ $json['Delai(jours)'] }}\nObjectifs Principaux :  {{ $json['Objectifs Principaux'] }}\nPoint Sécifiques :  {{ $json['Points Spécifiques '] }}\n\nVeuiller structuer votre réponse en sections json clairement delimitées : \n\nAssurez-vous que chaque section soit hautement personnalisée aux besoins spécifiques du client, au secteur d’activité et aux objectifs mentionnés. Utilisez un ton professionnel mais chaleureux qui reflète l’expertise de l’agence tout en établissant une connexion humaine.",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Tu es un assistant serviable et intelligent qui va m'aider à écrire des propositions commerciale"
+            },
+            {
+              "type": "HumanMessagePromptTemplate",
+              "message": "Client : Sophie Martin\nSecteur : \"Developpement durable\"\nBudget approximatif :  15000\nDelai souhaité : 60\nObjectifs Principaux :  \"Refonte complete de l'identité pour mieux comminiquer sur les solutions éco-responsables \",\nPoint Sécifiques :  \"Souhaite un design épuré , moderne et une UX optimisé pour les explications techniques\",\n   "
+            },
+            {
+              "type": "AIMessagePromptTemplate",
+              "message": "\n  \"introduction\": \"Chère Madame Martin,\\n\\nNous avons pris connaissance de votre projet ambitieux pour Ecovert Solutions et sommes enchantés par la perspective de collaborer avec une entreprise aussi engagée dans le développement durable. La refonte de votre identité pour mieux communiquer sur vos solutions éco-responsables est un défi passionnant que nous sommes impatients de relever à vos côtés.\",\n  \"comprehension\": \"Nous comprenons parfaitement qu'Ecovert Solutions, en tant qu'acteur clé dans le développement durable, a besoin d'une identité visuelle et d'une expérience utilisateur qui reflètent non seulement votre mission, mais aussi la clarté et l'innovation de vos solutions. Vous aspirez à un design épuré et moderne, capable de traduire la sophistication de vos explications techniques de manière intuitive et accessible. L'objectif est clair : améliorer la compréhension de vos offres éco-responsables, renforcer votre positionnement et engager plus efficacement votre audience.\",\n  \"approche\": \"Notre approche est centrée sur la collaboration, la clarté et l'impact. Pour Ecovert Solutions, cela signifie que nous allons au-delà de la simple création esthétique. Nous plongerons au cœur de vos solutions techniques pour en saisir l'essence, puis les transformerons en une expérience visuelle et interactive fluide. Notre équipe s'attachera à concevoir un design épuré qui met en lumière votre expertise, et une UX optimisée qui démystifie l'information technique, rendant vos messages plus percutants et mémorables. Nous croyons qu'une identité forte est la clé pour que vos innovations en développement durable résonnent pleinement.\",\n  \"services\": [\n    {\n      \"nom\": \"Refonte d'Identité Visuelle & Branding\",\n      \"description\": \"Création d'une nouvelle identité visuelle épurée et moderne, alignée avec les valeurs et l'engagement d'Ecovert Solutions. L'objectif est de véhiculer une image forte, cohérente et mémorable de votre marque dans le secteur du développement durable.\",\n      \"livrables\": \"Nouveau logo et ses déclinaisons, charte graphique complète (couleurs, typographies, iconographie, usages), éléments graphiques pour supports digitaux et imprimés, guide d'utilisation de la marque.\",\n      \"avantages\": \"Renforcement de la reconnaissance de marque, positionnement affirmé comme leader innovant, image professionnelle et contemporaine, cohérence sur tous les points de contact.\"\n    },\n    {\n      \"nom\": \"Conception UX/UI Optimisée pour la Communication Technique\",\n      \"description\": \"Développement d'une expérience utilisateur (UX) intuitive et d'une interface utilisateur (UI) élégante, spécifiquement conçues pour simplifier la compréhension de vos solutions techniques complexes. L'accent sera mis sur la clarté, l'accessibilité et l'engagement.\",\n      \"livrables\": \"Analyse des parcours utilisateurs, wireframes (maquettes fonctionnelles), prototypes interactifs, maquettes graphiques des interfaces (pour site web, application, ou présentations interactives), guide de style UI.\",\n      \"avantages\": \"Amélioration significative de l'engagement utilisateur, réduction de la courbe d'apprentissage des concepts techniques, crédibilité accrue par une présentation professionnelle et limpide de vos innovations.\"\n    },\n    {\n      \"nom\": \"Stratégie et Création de Contenu Éco-responsable\",\n      \"description\": \"Définition d'une ligne éditoriale et création de contenus percutants qui traduisent vos solutions éco-responsables de manière engageante et compréhensible. Nous veillerons à ce que le ton et le message soient cohérents avec votre nouvelle identité et vos objectifs de communication.\",\n      \"livrables\": \"Architecture de l'information pour vos contenus techniques, recommandations de ton et de style, rédaction de messages clés et d'exemples de textes pour vos supports (web, brochures, présentations).\",\n      \"avantages\": \"Communication plus claire et impactante de vos bénéfices environnementaux, renforcement de votre expertise, meilleure connexion émotionnelle avec votre public cible.\"\n    }\n  ],\n  \"processus\": \"Notre processus est structuré pour garantir transparence et efficacité :\\n\\n1.  **Découverte & Stratégie (Semaines 1-2)** : Immersion complète dans votre univers, vos solutions et vos objectifs. Ateliers de co-création pour définir la direction artistique et les axes UX.\\n2.  **Conception d'Identité Visuelle (Semaines 3-4)** : Développement des pistes créatives pour votre logo et la charte graphique, itérations basées sur vos retours.\\n3.  **Design UX/UI & Contenu (Semaines 5-6)** : Conception des parcours utilisateurs, wireframes et maquettes UI des interfaces clés. Intégration des principes de communication technique claire et concise.\\n4.  **Finalisation & Lancement (Semaines 7-8)** : Ajustements finaux, livraison des livrables définitifs et accompagnement pour leur mise en œuvre.\",\n  \"timeline\": \"Nous nous engageons à livrer ce projet dans un délai de 60 jours, réparti comme suit :\\n\\n*   **Jours 1-14** : Phase de découverte approfondie, audit existant et ateliers de stratégie (Identité & UX).\\n*   **Jours 15-28** : Conception et validation de la nouvelle identité visuelle (logo, charte graphique).\\n*   **Jours 29-42** : Conception UX (wireframes, parcours) et UI (maquettes) pour les interfaces clés, incluant la structuration des explications techniques.\\n*   **Jours 43-56** : Intégration des retours, finalisation des livrables graphiques et UX/UI, préparation des guides d'utilisation.\\n*   **Jours 57-60** : Présentation finale et livraison des fichiers maîtres.\",\n  \"investissement\": \"Pour une refonte complète de votre identité, incluant la création d'une identité visuelle épurée et moderne, ainsi qu'une conception UX/UI optimisée pour la clarté des explications techniques, l'investissement approximatif pour ce projet se situe autour de **15 000 euros**. Ce budget estimatif couvre l'ensemble des services décrits et reflète notre engagement à vous fournir une solution sur mesure et de haute qualité qui amplifiera l'impact d'Ecovert Solutions.\",\n  \"conclusion\": \"Nous sommes convaincus que cette refonte d'identité et cette optimisation de l'expérience utilisateur permettront à Ecovert Solutions de communiquer avec une efficacité et une clarté inégalées sur vos solutions éco-responsables. Nous serions ravis de discuter plus en détail de cette proposition et de la manière dont nous pouvons aider Ecovert Solutions à briller davantage. Nous nous tenons à votre entière disposition pour un échange. Ensemble, faisons rayonner votre engagement pour un avenir plus durable.\"\n"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -460,
+        0
+      ],
+      "id": "29bf5943-ca0e-4770-89af-fe0505388463",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -440,
+        200
+      ],
+      "id": "67af95ab-4ef8-47c5-8ce8-8823693307ea",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "z6ch5QednQfY7svP",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"introduction\": \"Introduction personnalisée mentionnant le client et ses besoins spécifiques...\",\n  \"comprehension\": \"Démonstration de notre compréhension du projet et des défis du secteur...\",\n  \"approche\": \"Notre approche unique pour ce projet spécifique...\",\n  \"services\": [\n    {\n      \"nom\": \"Nom du service 1\",\n      \"description\": \"Description personnalisée...\",\n      \"livrables\": \"Liste des livrables...\",\n      \"avantages\": \"Avantages spécifiques pour ce client...\"\n    },\n    {\n      \"nom\": \"Nom du service 2\",\n      \"description\": \"Description personnalisée...\",\n      \"livrables\": \"Liste des livrables...\",\n      \"avantages\": \"Avantages spécifiques pour ce client...\"\n    }\n  ],\n  \"processus\": \"Description du processus de travail et des étapes...\",\n  \"timeline\": \"Proposition de planning adaptée au délai demandé...\",\n  \"investissement\": \"Fourchette de prix stratégiquement formulée basée sur le budget mentionné...\",\n  \"conclusion\": \"Conclusion convaincante adaptée aux objectifs du client...\"\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -280,
+        220
+      ],
+      "id": "e6ea7430-2484-4a18-a9df-72bf3bb96a19",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "1W0n4KNhGkoON-DiH3jMdTvsQ10fDMYVYHAtousQzpRY",
+          "mode": "list",
+          "cachedResultName": "model proposition commerciale",
+          "cachedResultUrl": "https://docs.google.com/document/d/1W0n4KNhGkoON-DiH3jMdTvsQ10fDMYVYHAtousQzpRY/edit?usp=drivesdk"
+        },
+        "name": "=Propal-{{ $('Get row(s) in sheet').item.json['nom du client'] }}-{{ $now.format(\"dd-MM-yy\") }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        580,
+        0
+      ],
+      "id": "5dbb599e-2a7c-4318-a91e-85814365fdf6",
+      "name": "Copy file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "fL0R90VFQunxzIWj",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $json.id }}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"Entreprise\"] }}",
+              "replaceText": "={{ $('Get row(s) in sheet').item.json['Entreprise '] }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"Nom client\"] }}",
+              "replaceText": "={{ $('Get row(s) in sheet').item.json['nom du client'] }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"Secteur\"] }}",
+              "replaceText": "={{ $('Get row(s) in sheet').item.json.Secteur }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $('Basic LLM Chain').item.json.output.introduction }}\n",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.introduction }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $('Basic LLM Chain').item.json.output.comprehension }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.comprehension }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $('Basic LLM Chain').item.json.output.approche }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.approche }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"services\"][0].nom }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.services[0].nom }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"services\"][0].description }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.services[0].description }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": " {{ $json[\"services\"][0].livrables }}",
+              "replaceText": "={{ $('Summarize').item.json.concatenated_Service_ }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"services\"][0].avantages }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.services[1].avantages }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $('Basic LLM Chain').item.json.output.services[2].nom }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.services[2].nom }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"services\"][1].nom }}",
+              "replaceText": "=\n{{ $('Basic LLM Chain').item.json.output.services[2].nom }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"processus\"] }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.processus }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "({{ $json[\"Délai(jours)\"] }} jours)",
+              "replaceText": "={{ $('Get row(s) in sheet').item.json['Delai(jours)'].toString() }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"timeline\"] }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.timeline }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"investissement\"] }} {{ $('Basic LLM Chain').item.json.output.services[2].nom }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.services[2].nom }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"conclusion\"] }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.conclusion }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $('Basic LLM Chain').item.json.output.services[2].description }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.services[2].description }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $('Basic LLM Chain').item.json.output.services[2].livrables }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.services[2].livrables }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $('Basic LLM Chain').item.json.output.services[2].avantages }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.services[2].avantages }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $('Summarize').item.json.concatenated_Service_ }}",
+              "replaceText": "={{ $('Summarize').item.json.concatenated_Service_ }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ $json[\"investissement\"] }}",
+              "replaceText": "={{ $('Basic LLM Chain').item.json.output.timeline }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        820,
+        0
+      ],
+      "id": "4101ce7a-c643-4d4e-b391-7342988ad73b",
+      "name": "Update a document",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "biUt4WplMPGPemw1",
+          "name": "Google Docs account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1psgZH7KnnO0ywllRfh1oICAWnUo67AjQAPCAgcGuM8g",
+          "mode": "list",
+          "cachedResultName": "Propal commerciale",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1psgZH7KnnO0ywllRfh1oICAWnUo67AjQAPCAgcGuM8g/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Feuille 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1psgZH7KnnO0ywllRfh1oICAWnUo67AjQAPCAgcGuM8g/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -660,
+        0
+      ],
+      "id": "1243131b-5510-49f5-89b3-e2cf68febbc9",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "VFOE82cbUseEOpnf",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "=output.services",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        0
+      ],
+      "id": "f83473ea-2d00-4717-b2dd-1f339d7a32eb",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ddc49a8d-05d6-4e9f-ab07-4a6d410bdb75",
+              "name": "Service ",
+              "value": "={{ $json.nom }}\n{{ $json.description }}\n{{ $json.livrables }}\n{{ $json.avantages }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        60,
+        0
+      ],
+      "id": "af00489e-9ae1-4cfe-8f70-77927b66e6c9",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "aggregation": "concatenate",
+              "field": "Service ",
+              "separateBy": "\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1.1,
+      "position": [
+        280,
+        0
+      ],
+      "id": "476a9e02-24f4-4e15-89ac-8d3c3be637ba",
+      "name": "Summarize"
+    },
+    {
+      "parameters": {
+        "content": "Propal Commercial version 1",
+        "height": 740,
+        "width": 2200
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1020,
+        -240
+      ],
+      "typeVersion": 1,
+      "id": "96e042f3-a817-4e9e-b1f3-d40b225f2427",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {
+    "Get row(s) in sheet": [
+      {
+        "json": {
+          "row_number": 2,
+          "Data de demande ": "14/05/2025",
+          "nom du client": "Sophie Martin",
+          "Entreprise ": "Ecovert Solutions",
+          "Email": "s.martin@gmail.com",
+          "Secteur": "Developpement durable",
+          "Budget": 15000,
+          "Services demandés": "Site web , identité visuelle ,Strategie réseaux sociaux",
+          "Delai(jours)": 60,
+          "Objectifs Principaux": "Refonte complete de l'identité pour mieux comminiquer sur les solutions éco-responsables ",
+          "Points Spécifiques ": "Souhaite un design épuré , moderne et une UX optimisé pour les explications techniques",
+          "Assigné à": "Thomas"
+        }
+      }
+    ],
+    "Basic LLM Chain": [
+      {
+        "json": {
+          "output": {
+            "introduction": "Chère Madame Martin,\n\nC'est avec un grand enthousiasme que nous avons pris connaissance de votre projet de refonte d'identité pour Ecovert Solutions. Votre engagement profond dans le secteur du développement durable et votre désir de communiquer avec encore plus de clarté sur vos solutions éco-responsables résonnent fortement avec notre vision. Nous sommes ravis d'envisager une collaboration fructueuse pour amplifier votre impact.",
+            "comprehension": "Nous comprenons parfaitement qu'Ecovert Solutions, en tant qu'acteur de premier plan dans le développement durable, nécessite une identité de marque qui ne se contente pas d'être visuellement attrayante, mais qui excelle également dans la communication de concepts techniques complexes. Votre souhait d'un design épuré et moderne, allié à une expérience utilisateur (UX) optimisée, est une exigence clé que nous partageons pleinement. L'objectif est de transformer la manière dont vos innovations sont perçues et comprises, en renforçant votre crédibilité et en facilitant l'engagement de votre audience avec vos solutions durables.",
+            "approche": "Notre approche est fondamentalement collaborative et orientée vers la clarté et l'impact. Pour Ecovert Solutions, cela signifie que nous irons bien au-delà de la simple esthétique. Nous nous immerserons dans l'essence de vos solutions éco-responsables pour comprendre leurs subtilités techniques. Forts de cette compréhension, nous concevrons une identité visuelle qui reflète votre modernité et votre engagement, et une UX qui simplifie l'information technique, la rendant intuitive et accessible. Nous sommes convaincus qu'un design intelligent et une expérience utilisateur réfléchie sont les leviers essentiels pour que vos messages sur le développement durable atteignent leur plein potentiel.",
+            "services": [
+              {
+                "nom": "Refonte d'Identité Visuelle & Branding Stratégique",
+                "description": "Création d'une identité visuelle distinctive, épurée et résolument moderne pour Ecovert Solutions, en parfaite adéquation avec vos valeurs de durabilité et d'innovation. L'objectif est de forger une image de marque forte, cohérente et mémorable qui exprime l'avant-gardisme de vos solutions éco-responsables.",
+                "livrables": "Nouveau logo et ses déclinaisons optimisées, charte graphique complète et détaillée (incluant palettes de couleurs, typographies, iconographie dédiée, éléments graphiques distinctifs), et un guide d'utilisation de la marque pour une application cohérente sur tous les supports.",
+                "avantages": "Renforcement significatif de la reconnaissance et de la perception de votre marque, positionnement affirmé d'Ecovert Solutions comme un leader moderne et innovant dans le secteur du développement durable, et une cohérence visuelle impeccable sur l'ensemble de vos communications."
+              },
+              {
+                "nom": "Conception UX/UI Avancée pour la Simplification Technique",
+                "description": "Développement d'une expérience utilisateur (UX) intuitive et d'une interface utilisateur (UI) au design épuré, spécifiquement conçues pour démystifier et rendre accessibles les explications techniques complexes de vos solutions éco-responsables. Nous mettrons l'accent sur la clarté, la fluidité des parcours et l'engagement de l'utilisateur.",
+                "livrables": "Audit UX approfondi des parcours utilisateurs actuels, wireframes détaillés (maquettes fonctionnelles), prototypes interactifs pour validation, maquettes graphiques complètes des interfaces clés (site web, outils de présentation interactifs), et un guide de style UI pour la maintenance future.",
+                "avantages": "Amélioration spectaculaire de la compréhension et de l'engagement de votre audience avec vos solutions, réduction drastique de la complexité perçue des informations techniques, et augmentation de la crédibilité grâce à une présentation professionnelle et limpide de vos innovations durables."
+              },
+              {
+                "nom": "Stratégie de Contenu Éco-Pédagogique & Messagerie de Marque",
+                "description": "Définition d'une ligne éditoriale impactante et création d'un cadre pour des contenus qui traduisent la valeur et l'impact de vos solutions éco-responsables de manière pédagogique et engageante. Nous nous assurerons que le ton et le message soient parfaitement alignés avec votre nouvelle identité et vos objectifs de communication.",
+                "livrables": "Architecture de l'information optimisée pour la structuration de vos contenus techniques, recommandations précises sur le ton et le style rédactionnel, exemples de messages clés et de copywriting pour vos supports (web, brochures, présentations), et un framework narratif pour votre mission d'entreprise.",
+                "avantages": "Communication plus claire, plus percutante et plus inspirante de vos bénéfices environnementaux, renforcement de votre expertise et de votre leadership éclairé dans le développement durable, et une meilleure connexion émotionnelle avec vos différentes cibles."
+              }
+            ],
+            "processus": "Notre processus est agile et transparent, conçu pour garantir une collaboration fluide et des résultats exceptionnels :\n\n1.  **Immersion & Stratégie (Semaines 1-2)** : Plongée profonde dans l'univers d'Ecovert Solutions, vos innovations et vos ambitions. Ateliers de co-création pour définir la direction artistique, les axes UX prioritaires et la stratégie de contenu.\n2.  **Conception d'Identité Visuelle (Semaines 3-4)** : Développement de pistes créatives pour votre logo et la charte graphique, avec des cycles d'itération et de validation basés sur vos retours pour s'assurer d'une adéquation parfaite.\n3.  **Design UX/UI & Contenu (Semaines 5-6)** : Conception des parcours utilisateurs (wireframes) et des maquettes d'interfaces (UI) pour les points de contact clés. Intégration des principes de simplification pour les explications techniques et esquisse des contenus clés.\n4.  **Finalisation & Préparation au Déploiement (Semaines 7-8)** : Ajustements finaux, création des livrables définitifs (fichiers maîtres, guides), et préparation pour l'implémentation de votre nouvelle identité et expérience utilisateur. Un accompagnement sera proposé pour une transition en douceur.",
+            "timeline": "Nous nous engageons à mener à bien cette refonte stratégique dans un délai de 60 jours, réparti comme suit pour une efficacité maximale :\n\n*   **Jours 1-14** : Lancement du projet, découverte approfondie de vos solutions et de votre marché, ateliers stratégiques (identité, UX et contenu).\n*   **Jours 15-28** : Création et validation de la nouvelle identité visuelle d'Ecovert Solutions (logo, charte graphique complète).\n*   **Jours 29-42** : Conception des parcours utilisateurs (UX) et des maquettes d'interfaces (UI) pour vos plateformes clés, avec un focus particulier sur la clarté des explications techniques.\n*   **Jours 43-56** : Intégration de vos retours, finalisation des livrables graphiques et UX/UI, ainsi que la structuration des éléments de contenu clés.\n*   **Jours 57-60** : Présentation finale des livrables, remise des fichiers maîtres et recommandations pour un déploiement optimal.",
+            "investissement": "Pour cette refonte complète de l'identité d'Ecovert Solutions, englobant la création d'une identité visuelle épurée et moderne, ainsi qu'une conception UX/UI spécifiquement optimisée pour la clarté de vos explications techniques, l'investissement approximatif pour ce projet est estimé à **15 000 euros (quinze mille euros)**. Ce budget reflète l'étendue des services proposés et notre engagement à livrer une solution sur mesure, de haute qualité, qui propulsera la communication de vos solutions éco-responsables.",
+            "conclusion": "Nous sommes absolument convaincus que cette proposition stratégique permettra à Ecovert Solutions de non seulement rafraîchir son image, mais surtout de communiquer avec une clarté et un impact sans précédent sur vos solutions éco-responsables. Nous serions enchantés de discuter plus en détail de cette proposition et d'explorer comment notre expertise peut contribuer directement au rayonnement de votre mission. Nous restons à votre entière disposition pour planifier cet échange. Ensemble, donnons à vos actions durables la visibilité et la compréhension qu'elles méritent."
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Copy file": {
+      "main": [
+        [
+          {
+            "node": "Update a document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summarize": {
+      "main": [
+        [
+          {
+            "node": "Copy file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "abcc9270-6cc1-44a9-88e4-95062e05293e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d45405848de0067d2b25fd1583ca519c2b0065ec9cabf87f7c28b4289dc03784"
+  },
+  "id": "mXlag34zjLIbZaCO",
+  "tags": []
+}
