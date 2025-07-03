@@ -76,8 +76,3 @@ Un Google Doc comme celui-ci sera généré automatiquement :
 
 Développé par [@Falleiz](https://github.com/Falleiz) dans le cadre de projets d’automatisation de la génération de contenu.
 
----
-
-## 📝 Licence
-
-Ce projet est open-source sous licence MIT.
